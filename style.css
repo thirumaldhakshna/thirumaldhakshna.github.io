@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap');
+body{
+	background-color: lightgrey;
+	font-family: 'Prompt', sans-serif;
+}
+.container{
+	position: absolute; top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+}
+.card{
+	position: absolute; top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px; height: 150px;
+	border-radius: 10px;
+	background-color: white;
+}
+h1, .cont{
+	text-align: center;
+}
+.cont{
+	font-weight: lighter;
+}
+.mess{
+	position: fixed;
+	bottom: 10px; left: 10px;
+	font-size: 10px;
+	color: white; text-shadow: 1px 1px  5px black;
+
+}
+a{
+	text-decoration: none;
+	color:cadetblue;
+}
+a:hover{
+	cursor: pointer;
+	color: red;
+}
