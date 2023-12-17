@@ -13,19 +13,23 @@ body{
 	width: 500px; height: 150px;
 	border-radius: 10px;
 	background-color: white;
+	box-shadow: 2px 2px 10px black;
+	z-index: -1;
 }
-h1, .cont{
+h1, .cont, .mess{
 	text-align: center;
+	z-index: 1;
 }
 .cont{
 	font-weight: lighter;
 }
 .mess{
-	position: fixed;
-	bottom: 10px; left: 10px;
-	font-size: 10px;
+	position: relative;
+	top: 30px;
+	font-size: 15px;
 	color: white; text-shadow: 1px 1px  5px black;
-
+	font-family: monospace;
+	font-weight: bolder;
 }
 a{
 	text-decoration: none;
@@ -34,4 +38,12 @@ a{
 a:hover{
 	cursor: pointer;
 	color: red;
+}
+
+@media only screen and (max-width: 600px){
+
+	.card{
+		width: 320px;
+		height: 180px;
+	}
 }
