@@ -44,8 +44,7 @@ body{
 }
 .h-am-link .about a{
     color: darkmagenta;
-    border: 2px solid darkmagenta;
-    border-radius: 7px;
+    border: 2px solid darkmagenta;
 }
 .h-am-link .about a:hover{
     background-color: darkmagenta;
@@ -53,8 +52,7 @@ body{
 }
 .h-am-link .a1 a{
     color:darkgreen;
-    border: 2px solid darkgreen;
-    border-radius: 7px;
+    border: 2px solid darkgreen;
 }
 .h-am-link .a1 a:hover{
     background-color: darkgreen;
@@ -287,9 +285,9 @@ body{
         font-size: 15px;
     }
     .h-am-link .a1 a{
-        background-color:darkgreen;
-        color: white;
-        border-radius: 5px;
+       color: white;
+       background-color: darkgreen;
+       border-radius: 5px;
     }
     .h-am-link .about a{
         background-color: darkmagenta;
