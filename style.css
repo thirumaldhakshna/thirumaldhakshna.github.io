@@ -289,10 +289,12 @@ body{
     .h-am-link .a1 a{
         background-color:darkgreen;
         color: white;
+        border-radius: 5px;
     }
     .h-am-link .about a{
-    background-color: darkmagenta;
-    color: white;
+        background-color: darkmagenta;
+        color: white;
+        border-radius: 5px;
     }
     .head-tag{
         background-color: rgb(255, 255, 255);
