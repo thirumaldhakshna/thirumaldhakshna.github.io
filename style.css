@@ -284,16 +284,6 @@ body{
         font-weight: bolder;
         font-size: 15px;
     }
-    .h-am-link .a1 a{
-       color: white;
-       background-color: darkgreen;
-       border-radius: 5px;
-    }
-    .h-am-link .about a{
-        background-color: darkmagenta;
-        color: white;
-        border-radius: 5px;
-    }
     .head-tag{
         background-color: rgb(255, 255, 255);
         padding: 10px;
