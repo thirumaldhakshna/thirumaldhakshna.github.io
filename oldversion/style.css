@@ -1,0 +1,300 @@
+body{
+    background-color: #fff; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    background-color: #fff;
+    margin: 0% 7%;
+}
+.head-tag{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    margin: 3% 5%;
+    height: 50px; 
+    position: -webkit-sticky; 
+    position: sticky;
+    padding: 10px;
+    top: 0;
+}
+.h-so-link{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.h-am-link{
+    display: flex;
+}
+.h-am-link-po{
+    position: absolute;
+    right: 0px;
+}
+.h-am-link a{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bolder;
+}
+#try{
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    display: none;
+}
+.h-am-link .about a{
+    color: darkmagenta;
+    border: 2px solid darkmagenta;
+}
+.h-am-link .about a:hover{
+    background-color: darkmagenta;
+    color: white;
+}
+.h-am-link .a1 a{
+    color:darkgreen;
+    border: 2px solid darkgreen;
+}
+.h-am-link .a1 a:hover{
+    background-color: darkgreen;
+    color:white;
+}
+.profile{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.title-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1%;
+}
+.title-section img{
+    padding-right:10px;
+    width: 180px;
+    border-radius: 60%;
+}
+.title-section span{
+    font-size: 15px;
+    font-weight: lighter;    
+}
+.myself{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3% 0%;
+}
+.myself-section{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+.my-title{
+    font-size: 18px;
+    color: darkmagenta;
+}
+.my-content{
+    text-indent: 20px;
+    width: 97%;
+    padding: 10px;
+    text-align: justify;
+}
+.education{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3% 0%;
+}
+.education-section{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+.e-title{
+    font-size: 18px;
+    color: darkmagenta;
+}
+/* .e-list{
+    border: 2px solid green;
+} */
+.head-name{
+    font-weight: bolder;
+}
+.time{
+    font-size: 11px;
+    color: gray;
+}
+.desc{
+    display: block;
+    padding-top: 10px;
+    font-size: 15px;
+    color: gray;
+}
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3% 0%;
+}
+.about-section{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+.a-iteme{
+    display: flex;
+}
+.a-title{
+    text-align: center;
+    font-size: 18px;
+    color: darkmagenta;
+}
+.skill, .awards, .interest{
+    width: 60%;
+    padding: 5px;
+    margin: 2%;
+    display: block;
+    text-align: center;
+    border: 2px solid green;
+}
+.skill, .awards{
+    margin-right: 0%;
+}
+.awards a{
+    text-decoration: none;
+}
+.experince, .project, .so{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3% 0%;
+}
+.experince-section, .project-section, .so-section{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+#bre{
+    display: none;
+}
+.footer{
+    background-color: rgb(11, 2, 65);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 3% 0%;
+}
+.connection-page{
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+.connection-page a{
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(224, 45, 45);
+}
+.link{
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 2;
+    text-indent: 40px;
+    color: blueviolet;
+}
+@media only screen and (max-width: 600px){
+    .container{
+        margin: 0%;
+    }
+    .title-section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .title-section img{
+        margin-right: 0px;
+    }
+    .title-section h1{
+        text-align: center;
+    }
+    .myself-section{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .my-content{
+        width: 90%;
+        padding: 10px;
+        text-align: justify;
+    }
+    .education-section h1{
+        text-align: center;
+    }
+    .education-section{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .e-list{
+        width: 90%;
+        padding: 10px;
+        text-align: center;
+    }
+    .about-section{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .a-iteme{
+        display: block;
+        
+    }
+    .skill, .awards, .interest{
+        width: 93%;
+    }
+    .experince-section, .project-section, .so-section{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #bre{
+        display: block;
+    }
+    .link{
+        text-indent: 0px;
+    }
+    
+    .h-so-link{
+        display: none;
+    }
+    .h-am-link a{
+        text-decoration: none;
+        padding: 5px;
+        font-weight: bolder;
+        font-size: 15px;
+    }
+    .head-tag{
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        width: 95%;
+        margin: 0%;
+    }
+    .h-am-link-po{
+        position: absolute;
+        left: 0px;
+    }
+    #try{
+        display: block;
+    }
+}
