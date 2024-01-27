@@ -63,8 +63,6 @@
 }
 .child .prof{
     width: 70px;
-    box-shadow:2px 2px 5px black ; border: .5px solid gray;
-    position: relative;
 }
 .desc-sec .inst-na{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
