@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Thirumal Dhakshnamoorthy | AI & Data Science Portfolio</title>
+    <meta name="title" content="Thirumal Dhakshnamoorthy | AI & Data Science Portfolio">
+    <meta name="description" content="Portfolio of Thirumal Dhakshnamoorthy, B.Tech student in Artificial Intelligence and Data Science. Web Developer and Data Enthusiast. Explore projects in AI, Data Science, and Full-Stack Web Development.">
+    <meta name="keywords" content="Thirumal, Thirumal Dhakshnamoorthy, AI Student, Data Science, Web Developer, Portfolio, Dhanalakshmi Srinivasan University, Machine Learning, React, Python, Front-end Developer, Tamil Nadu">
+    <meta name="author" content="Thirumal Dhakshnamoorthy">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thirumaldhakshna.github.io/"> 
+    <meta property="og:title" content="Thirumal Dhakshnamoorthy | AI & Data Science Portfolio">
+    <meta property="og:description" content="Explore the portfolio of Thirumal Dhakshnamoorthy, featuring projects in AI, Data Science, and Full-Stack Web Development.">
+    <meta property="og:image" content="https://thirumaldhakshna.github.io/assets/profile.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://thirumaldhakshna.github.io/">
+    <meta property="twitter:title" content="Thirumal Dhakshnamoorthy | AI & Data Science Portfolio">
+    <meta property="twitter:description" content="Explore the portfolio of Thirumal Dhakshnamoorthy, featuring projects in AI, Data Science, and Full-Stack Web Development.">
+    <meta property="twitter:image" content="https://thirumaldhakshna.github.io/assets/profile.jpeg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#6366f1', // Indigo 500
+                        secondary: '#8b5cf6', // Violet 500
+                        accent: '#ec4899', // Pink 500
+                        dark: {
+                            DEFAULT: '#0a0a0a',
+                            surface: '#171717',
+                            border: '#262626',
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-dark text-gray-100 font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+    <!-- Animated Background Blobs -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none w-full h-full">
+        <div
+            class="absolute top-0 -left-4 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob">
+        </div>
+        <div
+            class="absolute top-0 -right-4 w-72 h-72 bg-secondary/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute -bottom-8 left-20 w-72 h-72 bg-accent/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 glassmorphism transition-all duration-300 border-b border-dark-border/50"
+        id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#"
+                class="text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                Thiru<span class="text-white">.</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">About</a>
+                <a href="#experience"
+                    class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Experience</a>
+                <a href="#projects"
+                    class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Projects</a>
+                <a href="#skills"
+                    class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Skills</a>
+                <a href="#contact"
+                    class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Contact</a>
+            </nav>
+
+            <!-- Resume Button Desktop -->
+            <a href="assets/Resume6.0.pdf" download
+                class="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-primary to-secondary rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-0.5">
+                Resume
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-300 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path class="menu-open-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path class="menu-close-icon hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-dark-surface/95 backdrop-blur-xl border-b border-dark-border" id="mobile-menu">
+            <nav class="flex flex-col space-y-4 px-6 py-8">
+                <a href="#about"
+                    class="text-gray-300 hover:text-white transition-colors text-lg font-medium mobile-link">About</a>
+                <a href="#experience"
+                    class="text-gray-300 hover:text-white transition-colors text-lg font-medium mobile-link">Experience</a>
+                <a href="#projects"
+                    class="text-gray-300 hover:text-white transition-colors text-lg font-medium mobile-link">Projects</a>
+                <a href="#skills"
+                    class="text-gray-300 hover:text-white transition-colors text-lg font-medium mobile-link">Skills</a>
+                <a href="#contact"
+                    class="text-gray-300 hover:text-white transition-colors text-lg font-medium mobile-link">Contact</a>
+                <a href="assets/Resume6.0.pdf" download
+                    class="inline-flex items-center justify-center px-5 py-3 mt-4 text-base font-medium text-white bg-gradient-to-r from-primary to-secondary rounded-full">
+                    Download Resume
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative z-10 w-full flex flex-col items-center">
+        <!-- Hero Section -->
+        <section id="home" class="w-full min-h-screen flex items-center pt-24 pb-12 px-6">
+            <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mt-4 lg:mt-0">
+
+                <div
+                    class="flex flex-col justify-center items-center lg:items-start text-center lg:text-left space-y-6 order-2 lg:order-1 reveal z-20">
+                    <div
+                        class="inline-flex items-center px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs lg:text-sm font-semibold mb-1 backdrop-blur-sm shadow-lg">
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary mr-2 animate-pulse"></span>
+                        Available for opportunities
+                    </div>
+
+                    <h1
+                        class="text-[2.5rem] md:text-5xl lg:text-7xl leading-[1.1] font-display font-extrabold tracking-tight max-w-[380px] lg:max-w-none break-words">
+                        Hi, I'm <br />
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent block lg:inline-block mt-1 pb-1">Thirumal
+                            Dhakshnamoorthy</span>
+                    </h1>
+
+                    <p
+                        class="text-[1.1rem] md:text-2xl text-gray-400 font-light max-w-[320px] lg:max-w-2xl leading-snug">
+                        AI & Data Science Student <br class="lg:hidden" /> <span
+                            class="text-primary font-medium">&amp;</span> Web Developer.
+                    </p>
+
+                    <p class="text-sm md:text-base text-gray-500 max-w-[340px] lg:max-w-xl leading-relaxed">
+                        Motivated tech enthusiast blending artificial intelligence with web technologies to build
+                        impactful and intelligent digital experiences.
+                    </p>
+
+                    <div
+                        class="flex flex-col lg:flex-row w-full items-center lg:items-start lg:justify-start gap-4 pt-3 pb-8 lg:pb-0">
+                        <a href="#projects"
+                            class="w-[200px] lg:w-auto px-8 py-3.5 text-sm md:text-base font-medium text-white bg-gradient-to-r from-dark-surface to-dark-border lg:bg-none lg:bg-white/10 lg:hover:bg-white/20 border border-white/10 rounded-full hover:border-primary/50 lg:hover:shadow-none hover:shadow-[0_0_15px_rgba(99,102,241,0.3)] transition-all duration-300 lg:hover:-translate-y-1 backdrop-blur-sm text-center">
+                            View Work
+                        </a>
+                        <div class="flex items-center space-x-4 lg:pl-2 mt-2 lg:mt-0">
+                            <a href="https://github.com/thirumaldhakshna" target="_blank" rel="noopener noreferrer"
+                                class="p-3 bg-dark-surface border border-dark-border rounded-full hover:border-primary/50 text-gray-400 hover:text-primary transition-all duration-300 shadow-md group">
+                                <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.16 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/thirumaldhakshna" target="_blank" rel="noopener noreferrer"
+                                class="p-3 bg-dark-surface border border-dark-border rounded-full hover:border-secondary/50 text-gray-400 hover:text-secondary transition-all duration-300 shadow-md group">
+                                <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end reveal relative w-full mb-8 lg:mb-0">
+                    <!-- Image container with glow effect -->
+                    <div
+                        class="relative w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full p-1.5 lg:p-2 bg-gradient-to-tr from-primary via-secondary to-accent z-10 animate-fade-in-up shadow-2xl lg:shadow-none">
+                        <div
+                            class="absolute inset-0 rounded-full bg-gradient-to-tr from-primary via-secondary to-accent blur-md lg:blur-xl opacity-40 lg:opacity-50">
+                        </div>
+                        <img src="assets/profile.jpeg" alt="Thirumal Dhakshnamoorthy"
+                            class="w-full h-full object-cover rounded-full border-[3px] lg:border-4 border-dark relative z-20 grayscale-0 lg:grayscale-[20%] lg:hover:grayscale-0 transition-all duration-500 shadow-inner">
+                    </div>
+
+                    <!-- Floating abstract elements -->
+                    <div
+                        class="absolute top-2 right-10 lg:-top-6 lg:-right-6 w-12 h-12 lg:w-24 lg:h-24 bg-dark-surface border border-dark-border rounded-xl lg:rounded-2xl rotate-12 -z-10 animate-[bounce_5s_infinite]">
+                    </div>
+                    <div
+                        class="absolute -bottom-2 left-10 lg:-bottom-10 lg:-left-6 w-8 h-8 lg:w-16 lg:h-16 rounded-full border border-primary/50 -z-10 animate-[ping_3s_infinite]">
+                    </div>
+                    <div
+                        class="absolute top-1/2 -right-2 lg:-right-12 w-6 h-6 lg:w-8 lg:h-8 bg-accent/20 rounded-full blur-md -z-10">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div
+                class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce opacity-70">
+                <span
+                    class="text-[10px] lg:text-xs text-gray-500 uppercase tracking-widest mb-1 lg:mb-2 font-medium">Scroll</span>
+                <svg class="w-4 h-4 lg:w-5 lg:h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="w-full py-24 px-6 relative border-t border-dark-border/50">
+            <div class="container mx-auto">
+                <div class="flex items-center space-x-4 mb-12 reveal">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white">About <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Me</span>
+                    </h2>
+                    <div class="h-px bg-dark-border flex-grow mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-8 space-y-6 text-lg text-gray-400 font-light leading-relaxed reveal">
+                        <p>
+                            I am a motivated B.Tech student in Artificial Intelligence and Data Science at Dhanalakshmi
+                            Srinivasan University, with an expected graduation in September 2027. My passion lies at the
+                            intersection of AI technologies, full-stack web development, and data analytics.
+                        </p>
+                        <p>
+                            Recently, I've been focusing on developing robust web applications and integrating
+                            intelligent features like RAG (Retrieval-Augmented Generation) systems. I thrive on solving
+                            complex problems, whether it's optimizing a React application, crafting a deep learning
+                            model, or creating predictive insights through data exploration.
+                        </p>
+                        <p>
+                            I'm actively seeking opportunities to apply my technical and problem-solving skills to
+                            contribute to innovative and impactful projects that make a difference.
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-4 reveal">
+                        <div class="glassmorphism p-8 rounded-2xl border border-dark-border">
+                            <h3 class="text-xl font-bold text-white mb-6 font-display">Fast Facts</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                        </path>
+                                    </svg>
+                                    <div>
+                                        <p class="text-white font-medium">Education</p>
+                                        <p class="text-gray-400 text-sm">B.Tech AI & Data Science</p>
+                                        <p class="text-gray-500 text-xs mt-1">Dhanalakshmi Srinivasan University</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                        </path>
+                                    </svg>
+                                    <div>
+                                        <p class="text-white font-medium">Location</p>
+                                        <p class="text-gray-400 text-sm">Virudhachalam, Tamil Nadu</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-0.5" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    <div>
+                                        <p class="text-white font-medium">Email</p>
+                                        <a href="mailto:thirumaldhakshna2006@gmail.com"
+                                            class="text-gray-400 text-sm hover:text-primary transition-colors">thirumaldhakshna2006@gmail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="w-full py-24 px-6 relative border-t border-dark-border/50 bg-dark-surface/30">
+            <div class="container mx-auto">
+                <div class="flex items-center space-x-4 mb-16 reveal">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white">Work <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">Experience</span>
+                    </h2>
+                    <div class="h-px bg-dark-border flex-grow mt-2"></div>
+                </div>
+
+                <div class="relative max-w-4xl mx-auto reveal">
+                    <!-- Vertical Line -->
+                    <div
+                        class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-dark-border">
+                    </div>
+
+                    <div class="space-y-12">
+                        <!-- Experience 1 -->
+                        <div class="relative flex flex-col md:flex-row justify-between items-center group">
+                            <div class="hidden md:flex order-1 w-5/12 justify-end pr-8">
+                                <div class="text-right">
+                                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                        Agrolings Pvt. Ltd.</h3>
+                                    <p class="text-primary font-medium mt-1">Website Manager & SEO Writer</p>
+                                    <p class="text-sm text-gray-500 mt-2">Aug 2025 — Mar 2026</p>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden md:flex order-1 md:-ml-0.5 items-center justify-center w-8 h-8 rounded-full bg-dark border-2 border-primary z-10 shadow-[0_0_10px_rgba(99,102,241,0.5)]">
+                                <span class="w-3 h-3 bg-primary rounded-full animate-pulse"></span>
+                            </div>
+                            <div class="order-1 w-full md:w-5/12 md:pl-8 mt-4 md:mt-0">
+                                <div class="glass-card p-6 rounded-2xl hover-card-up">
+                                    <h3 class="md:hidden text-xl font-bold text-white mb-1">Agrolings Pvt. Ltd.</h3>
+                                    <p class="md:hidden text-primary text-sm font-medium mb-3">Aug 2025 — Mar 2026</p>
+                                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                                        <li>Managed dual e-commerce platforms (theerthaa.com & haraahireandwear.com).
+                                        </li>
+                                        <li>Edited and updated website content, ensuring accuracy, consistency, and SEO
+                                            alignment.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="relative flex flex-col md:flex-row justify-between items-center group">
+                            <div class="order-1 w-full md:w-5/12 md:pr-8 mb-4 md:mb-0">
+                                <div class="glass-card p-6 rounded-2xl hover-card-up text-left md:text-right">
+                                    <h3 class="md:hidden text-xl font-bold text-white mb-1">BCM Ecoweave Pvt. Ltd.</h3>
+                                    <p class="md:hidden text-secondary text-sm font-medium mb-3">Dec 2025 — Feb 2026</p>
+                                    <ul class="list-disc md:list-none text-gray-400 text-sm space-y-2">
+                                        <li>Developed a dynamic Client Management System (CMS) as a freelance project.
+                                        </li>
+                                        <li>Designed and optimized system components for efficient client data handling.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden md:flex order-1 md:-ml-0.5 items-center justify-center w-8 h-8 rounded-full bg-dark border-2 border-secondary z-10 shadow-[0_0_10px_rgba(139,92,246,0.5)]">
+                                <span class="w-3 h-3 bg-secondary rounded-full animate-pulse"></span>
+                            </div>
+                            <div class="hidden md:flex order-1 w-5/12 pl-8">
+                                <div class="text-left">
+                                    <h3
+                                        class="text-xl font-bold text-white group-hover:text-secondary transition-colors">
+                                        BCM Ecoweave Pvt. Ltd.</h3>
+                                    <p class="text-secondary font-medium mt-1">Freelance Web Developer</p>
+                                    <p class="text-sm text-gray-500 mt-2">Dec 2025 — Feb 2026</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience 3 (Tata) -->
+                        <div class="relative flex flex-col md:flex-row justify-between items-center group">
+                            <div class="hidden md:flex order-1 w-5/12 justify-end pr-8">
+                                <div class="text-right">
+                                    <h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">
+                                        Tata Group - Forage</h3>
+                                    <p class="text-accent font-medium mt-1">Data Analytics Simulation</p>
+                                    <p class="text-sm text-gray-500 mt-2">Aug 2025</p>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden md:flex order-1 md:-ml-0.5 items-center justify-center w-8 h-8 rounded-full bg-dark border-2 border-accent z-10 shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+                                <span class="w-3 h-3 bg-accent rounded-full animate-pulse"></span>
+                            </div>
+                            <div class="order-1 w-full md:w-5/12 md:pl-8 mt-4 md:mt-0">
+                                <div class="glass-card p-6 rounded-2xl hover-card-up">
+                                    <h3 class="md:hidden text-xl font-bold text-white mb-1">Tata Group - Forage</h3>
+                                    <p class="md:hidden text-accent text-sm font-medium mb-3">Aug 2025</p>
+                                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                                        <li>Completed AI-powered data analytics simulation at Tata IQ, performing EDA
+                                            with GenAI to assess data quality, identify risks, and generate predictive
+                                            insights.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience 4 (VEI Tech) -->
+                        <div class="relative flex flex-col md:flex-row justify-between items-center group">
+                            <div class="order-1 w-full md:w-5/12 md:pr-8 mb-4 md:mb-0">
+                                <div class="glass-card p-6 rounded-2xl hover-card-up text-left md:text-right">
+                                    <h3 class="md:hidden text-xl font-bold text-white mb-1">VEI Technologies Pvt Ltd.
+                                    </h3>
+                                    <p class="md:hidden text-primary text-sm font-medium mb-3">Jun 2025 — Aug 2025</p>
+                                    <ul class="list-disc md:list-none text-gray-400 text-sm space-y-2">
+                                        <li>Enhanced data-driven decision-making by developing KPIs for business
+                                            processes.</li>
+                                        <li>Conducted comprehensive market and competitive research to inform data
+                                            analytics strategy.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden md:flex order-1 md:-ml-0.5 items-center justify-center w-8 h-8 rounded-full bg-dark border-2 border-primary z-10 shadow-[0_0_10px_rgba(99,102,241,0.5)]">
+                                <span class="w-3 h-3 bg-primary rounded-full animate-pulse"></span>
+                            </div>
+                            <div class="hidden md:flex order-1 w-5/12 pl-8">
+                                <div class="text-left">
+                                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                                        VEI Technologies</h3>
+                                    <p class="text-primary font-medium mt-1">Data Analytics Simulation</p>
+                                    <p class="text-sm text-gray-500 mt-2">Jun 2025 — Aug 2025</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience 5 (Deloitte) -->
+                        <div class="relative flex flex-col md:flex-row justify-between items-center group">
+                            <div class="hidden md:flex order-1 w-5/12 justify-end pr-8">
+                                <div class="text-right">
+                                    <h3
+                                        class="text-xl font-bold text-white group-hover:text-secondary transition-colors">
+                                        Deloitte Australia</h3>
+                                    <p class="text-secondary font-medium mt-1">Data Analytics Simulation</p>
+                                    <p class="text-sm text-gray-500 mt-2">Jun 2025</p>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden md:flex order-1 md:-ml-0.5 items-center justify-center w-8 h-8 rounded-full bg-dark border-2 border-secondary z-10 shadow-[0_0_10px_rgba(139,92,246,0.5)]">
+                                <span class="w-3 h-3 bg-secondary rounded-full animate-pulse"></span>
+                            </div>
+                            <div class="order-1 w-full md:w-5/12 md:pl-8 mt-4 md:mt-0">
+                                <div class="glass-card p-6 rounded-2xl hover-card-up">
+                                    <h3 class="md:hidden text-xl font-bold text-white mb-1">Deloitte Australia</h3>
+                                    <p class="md:hidden text-secondary text-sm font-medium mb-3">Jun 2025</p>
+                                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                                        <li>Completed job simulation focusing on data analysis and forensic technology.
+                                        </li>
+                                        <li>Created a Tableau dashboard and used Excel to classify data and derive
+                                            insights.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="w-full py-24 px-6 relative border-t border-dark-border/50">
+            <div class="container mx-auto">
+                <div class="flex items-center justify-end space-x-4 mb-16 reveal">
+                    <div class="h-px bg-dark-border flex-grow mt-2"></div>
+                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white">Featured <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Projects</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="glass-card rounded-2xl overflow-hidden hover-card-up group reveal">
+                        <div
+                            class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden flex items-center justify-center">
+                            <!-- Abstract Graphic for project -->
+                            <div class="absolute inset-0 bg-dark-surface/50 backdrop-blur-[2px]"></div>
+                            <svg class="w-16 h-16 text-primary z-10 transform group-hover:scale-110 transition-transform duration-500"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                RAG Document System</h3>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                AI-powered document intelligence system. Ingests business files, extracts structured
+                                data, stores embeddings in a vector DB, and answers natural language queries precisely.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full border border-primary/20">AI</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full border border-primary/20">Vector
+                                    DB</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full border border-primary/20">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="glass-card rounded-2xl overflow-hidden hover-card-up group reveal"
+                        style="transition-delay: 100ms;">
+                        <div
+                            class="h-48 bg-gradient-to-br from-secondary/20 to-accent/20 relative overflow-hidden flex items-center justify-center">
+                            <div class="absolute inset-0 bg-dark-surface/50 backdrop-blur-[2px]"></div>
+                            <svg class="w-16 h-16 text-secondary z-10 transform group-hover:scale-110 transition-transform duration-500"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">
+                                Hopenet</h3>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                Full-stack web application designed to connect Donors with nearby Receivers using
+                                real-time GPS-based proximity matching to reduce food waste.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full border border-secondary/20">MERN
+                                    Stack</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full border border-secondary/20">React</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full border border-secondary/20">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="glass-card rounded-2xl overflow-hidden hover-card-up group reveal"
+                        style="transition-delay: 200ms;">
+                        <div
+                            class="h-48 bg-gradient-to-br from-accent/20 to-primary/20 relative overflow-hidden flex items-center justify-center">
+                            <div class="absolute inset-0 bg-dark-surface/50 backdrop-blur-[2px]"></div>
+                            <svg class="w-16 h-16 text-accent z-10 transform group-hover:scale-110 transition-transform duration-500"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-accent transition-colors">
+                                Analytics Dashboard</h3>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                Advanced data dashboard created to meticulously display multidimensional fee data and
+                                track payments across different stages of college education.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full border border-accent/20">Excel</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full border border-accent/20">Data
+                                    Visualization</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full border border-accent/20">Dashboard</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="w-full py-24 px-6 relative border-t border-dark-border/50 bg-dark-surface/30">
+            <div class="container mx-auto">
+                <div class="flex items-center space-x-4 mb-16 reveal">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white">Technical <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Skills</span>
+                    </h2>
+                    <div class="h-px bg-dark-border flex-grow mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Languages & Web -->
+                    <div class="glass-card p-8 rounded-2xl hover-card-up reveal">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6 text-primary">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Programming & Web</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-primary hover:text-primary transition-colors cursor-default">Python</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-primary hover:text-primary transition-colors cursor-default">SQL</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-primary hover:text-primary transition-colors cursor-default">HTML5</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-primary hover:text-primary transition-colors cursor-default">CSS3</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-primary hover:text-primary transition-colors cursor-default">JavaScript</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-primary hover:text-primary transition-colors cursor-default">Tailwind
+                                CSS</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-primary hover:text-primary transition-colors cursor-default">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks & Data -->
+                    <div class="glass-card p-8 rounded-2xl hover-card-up reveal" style="transition-delay: 100ms;">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center mb-6 text-secondary">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">AI Frameworks & Models</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-secondary hover:text-secondary transition-colors cursor-default">Pandas</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-secondary hover:text-secondary transition-colors cursor-default">NumPy</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-secondary hover:text-secondary transition-colors cursor-default">Matplotlib</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-secondary hover:text-secondary transition-colors cursor-default">Scikit-Learn</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-secondary hover:text-secondary transition-colors cursor-default">RAG
+                                Systems</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-secondary hover:text-secondary transition-colors cursor-default">GenAI</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="glass-card p-8 rounded-2xl hover-card-up reveal" style="transition-delay: 200ms;">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6 text-accent">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Tools & Platforms</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-accent hover:text-accent transition-colors cursor-default">Power
+                                BI</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-accent hover:text-accent transition-colors cursor-default">Tableau</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-accent hover:text-accent transition-colors cursor-default">MySQL</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-accent hover:text-accent transition-colors cursor-default">Git
+                                & GitHub</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-accent hover:text-accent transition-colors cursor-default">VS
+                                Code</span>
+                            <span
+                                class="px-3 py-1.5 text-sm bg-dark border border-dark-border rounded-lg text-gray-300 hover:border-accent hover:text-accent transition-colors cursor-default">Excel
+                                & PPT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="w-full py-24 px-6 relative border-t border-dark-border/50">
+            <!-- Background element -->
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50">
+            </div>
+
+            <div class="container mx-auto max-w-5xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div class="reveal">
+                        <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">Let's Work <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Together</span>
+                        </h2>
+                        <p class="text-gray-400 text-lg mb-8 max-w-md">
+                            I'm currently seeking new opportunities where I can apply my skills in AI, data science, and
+                            web development. Whether you have a question or just want to say hi, I'll try my best to get
+                            back to you!
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center group">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-dark-surface border border-dark-border flex items-center justify-center mr-4 group-hover:border-primary transition-colors">
+                                    <svg class="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Email Me</p>
+                                    <a href="mailto:thirumaldhakshna2006@gmail.com"
+                                        class="text-lg font-medium text-white hover:text-primary transition-colors">thirumaldhakshna2006@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center group">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-dark-surface border border-dark-border flex items-center justify-center mr-4 group-hover:border-secondary transition-colors">
+                                    <svg class="w-5 h-5 text-gray-400 group-hover:text-secondary transition-colors"
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">LinkedIn</p>
+                                    <a href="https://linkedin.com/in/thirumaldhakshna" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-lg font-medium text-white hover:text-secondary transition-colors">thirumaldhakshna</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center group">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-dark-surface border border-dark-border flex items-center justify-center mr-4 group-hover:border-accent transition-colors">
+                                    <svg class="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">Location</p>
+                                    <span class="text-lg font-medium text-white">Virudhachalam, Tamil Nadu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal" style="transition-delay: 100ms;">
+                        <form action="https://formsubmit.co/thirumaldhakshna2006@gmail.com" method="POST"
+                            class="glass-card p-8 rounded-2xl flex flex-col space-y-4">
+                            <!-- Optional: disable captcha for better UX -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- Optional: auto-reply -->
+                            <input type="hidden" name="_autoresponse"
+                                value="Thank you for your message! I will be in touch soon.">
+
+                            <h3 class="text-2xl font-bold text-white mb-2">Send a Message</h3>
+
+                            <div class="flex flex-col">
+                                <label for="name" class="text-sm font-medium text-gray-400 mb-1">Your Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="bg-dark/50 border border-dark-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                                    placeholder="John Doe">
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label for="email" class="text-sm font-medium text-gray-400 mb-1">Your Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="bg-dark/50 border border-dark-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                                    placeholder="john@example.com">
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label for="message" class="text-sm font-medium text-gray-400 mb-1">Message</label>
+                                <textarea id="message" name="message" required rows="4"
+                                    class="bg-dark/50 border border-dark-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
+                                    placeholder="Hello Thirumal, I would like to..."></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="mt-4 px-6 py-3.5 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full border-t border-dark-border/50 py-8 bg-dark relative z-10">
+            <div
+                class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 Thirumal Dhakshnamoorthy. All rights reserved.</p>
+
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="https://github.com/thirumaldhakshna" target="_blank"
+                        class="hover:text-primary transition-colors">GitHub</a>
+                    <a href="https://linkedin.com/in/thirumaldhakshna" target="_blank"
+                        class="hover:text-secondary transition-colors">LinkedIn</a>
+                    <a href="assets/Resume6.0.pdf" download class="hover:text-accent transition-colors">Resume</a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
